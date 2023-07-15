@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL and Salesforce Marketing Cloud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+        <!-- Header section -->
+    <div class="top-message">
+        <p><strong>SFMC - Query Studio </strong></p>
+        
+      </div>
+      <nav>
+    <nav>
+      <div class="logo">
+        <h2>SQL & SFMC</h2>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <img src="loupe.png" alt="Search" class="search-icon">
+      </div>
+      
+      <div class="menu-toggle">
+                     <!-- Menu toggle button -->
+
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <!-- Navigation menu -->
+        <li><a href="index1.html" target="_blank">Book Reviews</a></li>
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#about-sql">SQL Functions</a></li> <!-- New item -->
+  
+      </ul>
+    </nav>
+  </header>
+    <!-- Home section -->
+
+  <section id="home">
+    <div class="content">
+      <div class="intro">
+        <h1>Welcome to SQL and Salesforce Marketing Cloud</h1>
+        <p>This website provides information and resources related to SQL and Salesforce Marketing Cloud.</p>
+      </div>
+    </div>
+  </section>
+    <!-- About section -->
+
+  <section id="about">
+    <div class="content">
+      <h2>About SQL and Salesforce Marketing Cloud</h2>
+      <p>SQL (Structured Query Language) is a programming language used for managing and manipulating databases. Salesforce Marketing Cloud is a platform that enables businesses to create and manage personalized marketing campaigns.</p>
+      <p>By combining SQL skills with Salesforce Marketing Cloud, you can leverage data to create targeted marketing campaigns and gain valuable insights.</p>
+    </div>
+  </section>
+    <!-- Resources section -->
+
+  <section id="resources">
+    <div class="content">
+      <h2>Resources</h2>
+      <table class="resource-table">
+                <!-- Resource table -->
+
+        <tr>
+          <td class="bullet-point">•</td>
+          <td>
+            <a href="https://developer.salesforce.com/docs/marketing/" target="_blank">Salesforce Marketing Cloud Documentation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="bullet-point">•</td>
+          <td>
+            <a href="https://trailhead.salesforce.com/en/content/learn/trails/marketing-cloud" target="_blank">Salesforce Marketing Cloud Trailhead</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="bullet-point">•</td>
+          <td>
+            <a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="bullet-point">•</td>
+          <td>
+            <a href="https://www.sqlcourse.com/" target="_blank">SQLCourse.com</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="bullet-point">•</td>
+          <td>
+            <a href="  http://dataviews.io/" target="_blank">ERD on Data views owned by &copy;Zuzanna Jarczynska </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+
+    <!-- About SQL section -->
+
+  <section id="about-sql">
+    <div class="content">
+      <h2>Marketing Cloud SQL Functions</h2>
+      <p>Marketing Cloud extends SQL with additional functions to leverage its features. Some common Marketing Cloud-specific SQL functions include:</p>
+      <ul>
+                <!-- List of SQL functions -->
+
+        <li>Date functions: DATEADD, DATEDIFF, DATETRUNC</li>
+        <li>Conversion functions: CAST, CONVERT, PARSE</li>
+        <li>String functions: CONCAT, SUBSTRING, REPLACE</li>
+        <li>Aggregation functions: SUM, AVG, COUNT, MAX, MIN</li>
+        <li>Conditional functions: CASE, COALESCE, IIF</li>
+      </ul>
+      <p>These functions can be used to manipulate and analyze data within Marketing Cloud.</p>
+      <br>
+      <h2>Limitations of Query Studio</h2>
+      <p>While Query Studio in Marketing Cloud provides a convenient way to query data, it has some limitations:</p>
+      <ul>
+                <!-- List of Query Studio limitations -->
+
+        <li>No support for UPDATE, INSERT, DELETE, TRUNCATE, or other data manipulation statements.</li>
+        <li>Restricted access to system tables and views.</li>
+        <li>Limited ability to perform complex joins or subqueries.</li>
+      </ul>
+      <br>
+      <h2>Writing Efficient SQL Queries</h2>
+      <p>To write SQL queries that process faster in Marketing Cloud, consider the following tips:</p>
+      <ul>
+                <!-- Tips for writing efficient SQL queries -->
+
+        <li>Minimize the use of unnecessary joins and subqueries.</li>
+        <li>Avoid selecting unnecessary columns; retrieve only the required data.</li>
+        <li>Use proper indexing on columns involved in search or filtering conditions.</li>
+        <li>Optimize complex calculations by breaking them down into simpler steps.</li>
+        <li>Avoid using wildcard characters at the beginning of search patterns.</li>
+        <li>Regularly review and optimize query performance using query performance tools.</li>
+      </ul>
+    </div>
+  </section>
+<br><br>
+  <div class="code-boxes-container">
+        <!-- Code boxes section -->
+
+    <div class="code-box">
+      <div class="code-box-header">
+        <h3 class="code-box-title">_Journey</h3>
+        <button class="copy-code-btn">Copy Code</button>
+      </div>
+      <pre class="code-box-content"><code class="language-html">SELECT
+      sent.AccountID,
+      sent.OYBAccountID,
+      sent.JobID,
+      sent.ListID,
+      sent.BatchID,
+      sent.SubscriberID,
+      sent.SubscriberKey,
+      sent.EventDate,
+      sent.Domain,
+      sent.TriggererSendDefinitionObjectID,
+      sent.TriggeredSendCustomerKey
+  FROM _Sent AS sent</code></pre>
+    </div>
+    <div class="code-box">
+      <div class="code-box-header">
+        <h3 class="code-box-title">_Open</h3>
+        <button class="copy-code-btn">Copy Code</button>
+      </div>
+      <pre class="code-box-content"><code class="language-html">SELECT
+      sent.AccountID,
+      sent.OYBAccountID,
+      sent.JobID,
+      sent.ListID,
+      sent.BatchID,
+      sent.SubscriberID,
+      sent.SubscriberKey,
+      sent.EventDate,
+      sent.Domain,
+      sent.TriggererSendDefinitionObjectID,
+      sent.TriggeredSendCustomerKey
+  FROM _Sent AS sent</code></pre>
+    </div>
+    <div class="code-box">
+      <div class="code-box-header">
+        <h3 class="code-box-title">_Sent</h3>
+        <button class="copy-code-btn">Copy Code</button>
+      </div>
+      <pre class="code-box-content"><code class="language-html"> SELECT
+      sent.AccountID,
+      sent.OYBAccountID,
+      sent.JobID,
+      sent.ListID,
+      sent.BatchID,
+      sent.SubscriberID,
+      sent.SubscriberKey,
+      sent.EventDate,
+      sent.Domain,
+      sent.TriggererSendDefinitionObjectID,
+      sent.TriggeredSendCustomerKey
+  FROM _Sent AS sent </code></pre>
+    </div>
+    <div class="code-box">
+      <div class="code-box-header">
+        <h3 class="code-box-title">_Push</h3>
+        <button class="copy-code-btn">Copy Code</button>
+      </div>
+      <pre class="code-box-content"><code class="language-html">SELECT
+      sent.AccountID,
+      sent.OYBAccountID,
+      sent.JobID,
+      sent.ListID,
+      sent.BatchID,
+      sent.SubscriberID,
+      sent.SubscriberKey,
+      sent.EventDate,
+      sent.Domain,
+      sent.TriggererSendDefinitionObjectID,
+      sent.TriggeredSendCustomerKey
+  FROM _Sent AS sent </code></pre>
+    </div>
+  </div>
+
+
+
+<br><br>
+
+
+
+  <footer>
+    <div class="content">
+          <div class="footer-content">
+      <p>&copy; 2023 SQL and Salesforce Marketing Cloud. No rights reserved.</p>
+      <div class="contact-icons">
+        <a href="mailto:your-email@gmail.com" target="_blank"><img src="gmail.png" alt="Gmail"></a>
+        <a href="https://www.linkedin.com/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/" target="_blank"><img src="github.png" alt="GitHub"></a>
+      </div>
+    
+    <p class="disclaimer">This website is for demonstration purposes only. Any resemblance to real websites or addresses is purely coincidental.
+
+      123 Fake Street, City, Country</p> <!-- New disclaimer -->
+</div>
+  </footer>
+
+  <script src="JavaScript.js"></script>
+</body>
+
+</html>
